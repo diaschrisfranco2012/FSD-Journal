@@ -1,0 +1,33 @@
+const readline = require('readline');
+const EventEmitter = require('events');
+const _ = require('lodash'); 
+
+const r1 = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+const studentEmitter = new EventEmitter();
+
+studentEmitter.on('marksEntered', (student) => {
+    const totalMarks = _.sum(student.marks);
+    const percentage = (totalMarks / (student.marks.length * 100)) * 100;
+
+    console.log("\n📋 Student Report:");
+    console.log(`Name: ${student.name}`);
+    console.log(`Marks: ${student.marks}`);
+    console.log(`Total: ${totalMarks}`);
+    console.log(`Percentage: ${percentage.toFixed(2)}%`);
+});
+
+function getStudentDetails() {
+    r1.question("Enter Student Name: ", (name) => {
+        r1.question("Enter marks separated by commas (e.g., 78,88,92): ", (marksInput) => {
+            const marksArray = marksInput.split(',').map(m => parseInt(m.trim()));
+            studentEmitter.emit('marksEntered', { name: name, marks: marksArray });
+            r1.close();
+        });
+    });
+}
+
+getStudentDetails();
