@@ -39,7 +39,8 @@ function App() {
 
   return (
     <div style={{ textAlign: "center", marginTop: "40px" }}>
-      <h1>📝 To-Do List</h1>
+      {/* <h1>📝 To-Do List</h1> */}
+      <h1>To-Do List</h1>
       <input
         type="text"
         placeholder="Enter task..."
@@ -59,7 +60,7 @@ function App() {
           >
             <span onClick={() => toggleTask(task.id)}>{task.title}</span>
             <button
-              style={{ marginLeft: "10px", background: "red", color: "white" }}
+              style={{ marginLeft: "10px", background: "blue", color: "white" }}
               onClick={() => deleteTask(task.id)}
             >
               Delete

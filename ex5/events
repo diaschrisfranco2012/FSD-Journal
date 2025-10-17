@@ -13,7 +13,8 @@ studentEmitter.on('marksEntered', (student) => {
     const totalMarks = _.sum(student.marks);
     const percentage = (totalMarks / (student.marks.length * 100)) * 100;
 
-    console.log("\n📋 Student Report:");
+    // console.log("\n📋 Student Report:");
+    console.log("\n Student Report:");
     console.log(`Name: ${student.name}`);
     console.log(`Marks: ${student.marks}`);
     console.log(`Total: ${totalMarks}`);

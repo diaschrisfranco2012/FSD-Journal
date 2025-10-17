@@ -25,7 +25,7 @@ eval("{function greet(name) {\r\n  console.log(`Hello, ${name}! Welcome to Webpa
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("{const { greet } = __webpack_require__(/*! ./greet.js */ \"./src/greet.js\");\r\n\r\nconsole.log('Webpack Demo Started!');\r\ngreet('Chris');\r\n\n\n//# sourceURL=webpack://ex10/./src/index.js?\n}");
+eval("{const { greet } = __webpack_require__(/*! ./greet.js */ \"./src/greet.js\");\r\n\r\nconsole.log('Webpack Demo Started!');\r\ngreet('Maverick');\r\n\n\n//# sourceURL=webpack://ex10/./src/index.js?\n}");
 
 /***/ })
 

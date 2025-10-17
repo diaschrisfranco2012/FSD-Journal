@@ -1,6 +1,6 @@
 const readline = require('readline');
 const usersDB = [
-    { username: "Chris", password: "12345" },
+    { username: "Maverick", password: "2305120" },
     { username: "Alice", password: "6969" },
     { username: "Bob", password: "abc123" }
 ];
